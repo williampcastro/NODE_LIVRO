@@ -5,9 +5,8 @@ var fib = (n) =>{
 
 var Obj = function() {};
 
-Obj.prototype.doSomething = (arg1) => {
+Obj.prototype.doSomething = (arg1_) => {
     var callback_ = arguments[arguments.lenth-1];
-
     callback = (typeof(callback_) == 'function' ? callback_ : null);
     var arg1 = typeof arg1_ === 'number' ? arg1_ : null;
 
@@ -17,7 +16,7 @@ Obj.prototype.doSomething = (arg1) => {
     process.nextTick(()=>{
         //bloqueia CPU
         var data = fib(arg1);
-        callback(null. data);
+        callback(null, data);
     });
 }
 
