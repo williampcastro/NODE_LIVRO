@@ -22,7 +22,7 @@ Obj.prototype.doSomething = function (arg1_) {
 }
 
 var test = new Obj();
-var number = 10;
+var number = 50;
 
 test.doSomething(number, function (err, value) {
     if (err)
